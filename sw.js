@@ -10,18 +10,18 @@ var cacheList = [
   "/minimal-pwa/pwa-fonts.png"
 ]
 
-// self.addEventListener('install', function(e) {
-//   console.log('Cache event!')
-//   e.waitUntil(
-//     caches.open(cacheStorageKey).then(function(cache) {
-//       console.log('Adding to Cache:', cacheList)
-//       return cache.addAll(cacheList)
-//     }).then(function() {
-//       console.log('Skip waiting!')
-//       return self.skipWaiting()
-//     })
-//   )
-// })
+self.addEventListener('install', function(e) {
+  console.log('Cache event!')
+  e.waitUntil(
+    caches.open(cacheStorageKey).then(function(cache) {
+      console.log('Adding to Cache:', cacheList)
+      return cache.addAll(cacheList)
+    }).then(function() {
+      console.log('Skip waiting!')
+      return self.skipWaiting()
+    })
+  )
+})
 
 self.addEventListener('activate', function(e) {
   console.log('Activate event')
