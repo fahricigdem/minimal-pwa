@@ -6,8 +6,8 @@ var cacheList = [
   '/minimal-pwa/',
   "/minimal-pwa/index.html",
   "/minimal-pwa/main.css",
-   // "/minimal-pwa/e.png",
-  "/minimal-pwa/pwa-fonts.png"
+  "/minimal-pwa/e.png",
+  // "/minimal-pwa/pwa-fonts.png"
 ]
 
 self.addEventListener('install', function(e) {
